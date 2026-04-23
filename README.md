@@ -1,8 +1,4 @@
 # Bangga Group  
-### CV. Sanjaya Maju Sejahtera  
-**Food Frozen**
-
-![Bangga Group Banner](img/logo/bangga.png)
 
 ## 🏢 Tentang Perusahaan
 **CV. Sanjaya Maju Sejahtera** merupakan perusahaan yang berada di bawah naungan  
