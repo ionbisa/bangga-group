@@ -417,7 +417,7 @@
     }
 
     submitButton.disabled = true;
-    submitButton.textContent = "Membuka WhatsApp...";
+    submitButton.textContent = "Menyiapkan WhatsApp...";
 
     const whatsappUrl = buildContactWhatsappUrl();
     const whatsappWindow = window.open(
@@ -438,7 +438,7 @@
 
     if (formAlert) {
       formAlert.textContent =
-        "WhatsApp berhasil dibuka. Silakan lanjutkan dan kirim pesan Anda ke tim BANGGA GROUP.";
+        "WhatsApp telah dibuka. Silakan lanjutkan pengiriman pesan kepada tim BANGGA GROUP.";
       formAlert.classList.remove("d-none");
     }
   };
