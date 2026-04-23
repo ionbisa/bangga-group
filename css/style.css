@@ -104,12 +104,30 @@ p {
 }
 
 .navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.navbar-brand-title {
   font-size: 0.94rem;
-  line-height: 1.05;
-  letter-spacing: 0.03em;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--gold);
   text-shadow: 0 0 14px rgba(242, 200, 121, 0.42);
-  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.navbar-brand-subtitle {
+  font-size: 0.58rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--navy);
+  text-transform: none;
+  white-space: normal;
 }
 
 #mainNavbar.menu-open .navbar-logo {
@@ -1108,7 +1126,6 @@ p {
 }
 
 .social-btn,
-.floating-wa,
 .back-to-top {
   display: inline-flex;
   align-items: center;
@@ -1136,21 +1153,6 @@ p {
   background: linear-gradient(135deg, var(--gold), var(--gold-2));
   color: var(--navy);
   box-shadow: 0 12px 28px rgba(217, 164, 65, 0.24);
-}
-
-.floating-wa {
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #25d366;
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5rem;
-  box-shadow: 0 14px 34px rgba(37, 211, 102, 0.35);
-  z-index: 1030;
 }
 
 .back-to-top {
@@ -1404,7 +1406,6 @@ p {
     z-index: 1040;
   }
 
-  body.mobile-nav-open .floating-wa,
   body.mobile-nav-open .back-to-top {
     opacity: 0;
     pointer-events: none;
@@ -1693,9 +1694,17 @@ p {
   }
 
   .navbar-brand-text {
-    font-size: 0.84rem;
-    line-height: 1.1;
-    max-width: 132px;
+    gap: 2px;
+    max-width: 148px;
+  }
+
+  .navbar-brand-title {
+    font-size: 0.8rem;
+  }
+
+  .navbar-brand-subtitle {
+    font-size: 0.5rem;
+    letter-spacing: 0.04em;
   }
 
   .trust-strip-section {
