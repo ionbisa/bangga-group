@@ -1581,16 +1581,17 @@ p {
   }
 
   #mainNavbar .navbar-collapse {
-    position: fixed;
-    inset: 0;
-    padding: 104px 22px 28px;
-    border-radius: 0;
-    border: none;
+    top: calc(100% + 10px);
+    right: 0;
+    left: 0;
+    padding: 18px;
+    border-radius: 26px;
+    border: 1px solid rgba(8, 26, 51, 0.08);
     background:
-      radial-gradient(circle at top right, rgba(217, 164, 65, 0.12), transparent 26%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.985), rgba(244, 248, 252, 0.99));
-    box-shadow: none;
-    max-height: 100vh;
+      radial-gradient(circle at top right, rgba(217, 164, 65, 0.1), transparent 24%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(244, 248, 252, 0.995));
+    box-shadow: 0 24px 44px rgba(8, 26, 51, 0.14);
+    max-height: calc(100vh - 110px);
     overflow-y: auto;
     overscroll-behavior: contain;
     z-index: 1;
@@ -1605,68 +1606,19 @@ p {
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.22s ease, transform 0.22s ease;
   }
 
   #mainNavbar .navbar-nav {
+    align-items: stretch !important;
+    width: 100%;
     gap: 14px;
-    padding-bottom: 24px;
+    padding-bottom: 0;
   }
 
   #mainNavbar .nav-item {
-    opacity: 0;
-    transform: translateY(18px);
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s ease;
-  }
-
-  #mainNavbar .nav-item:nth-child(1) {
-    transition-delay: 0.04s;
-  }
-
-  #mainNavbar .nav-item:nth-child(2) {
-    transition-delay: 0.08s;
-  }
-
-  #mainNavbar .nav-item:nth-child(3) {
-    transition-delay: 0.12s;
-  }
-
-  #mainNavbar .nav-item:nth-child(4) {
-    transition-delay: 0.16s;
-  }
-
-  #mainNavbar .nav-item:nth-child(5) {
-    transition-delay: 0.2s;
-  }
-
-  #mainNavbar .nav-item:nth-child(6) {
-    transition-delay: 0.24s;
-  }
-
-  #mainNavbar .nav-item:nth-child(7) {
-    transition-delay: 0.28s;
-  }
-
-  #mainNavbar .nav-item:nth-child(8) {
-    transition-delay: 0.32s;
-  }
-
-  #mainNavbar .nav-item:nth-child(9) {
-    transition-delay: 0.36s;
-  }
-
-  #mainNavbar .navbar-collapse.show::before,
-  #mainNavbar .navbar-collapse.collapsing::before,
-  #mainNavbar.menu-open .navbar-collapse::before,
-  #mainNavbar .navbar-collapse.show .nav-item,
-  #mainNavbar .navbar-collapse.collapsing .nav-item,
-  #mainNavbar.menu-open .nav-item {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
+    transition: none;
   }
 
   #mainNavbar .nav-link {
@@ -1715,7 +1667,7 @@ p {
 
   #mainNavbar .nav-link:hover,
   #mainNavbar .nav-link.active {
-    transform: translateX(4px);
+    transform: none;
   }
 
   #mainNavbar .nav-item.ms-lg-2 {
