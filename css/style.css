@@ -1659,7 +1659,11 @@ p {
     transition-delay: 0.36s;
   }
 
+  #mainNavbar .navbar-collapse.show::before,
+  #mainNavbar .navbar-collapse.collapsing::before,
   #mainNavbar.menu-open .navbar-collapse::before,
+  #mainNavbar .navbar-collapse.show .nav-item,
+  #mainNavbar .navbar-collapse.collapsing .nav-item,
   #mainNavbar.menu-open .nav-item {
     opacity: 1;
     transform: translateY(0);

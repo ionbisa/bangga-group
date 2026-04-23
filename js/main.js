@@ -8,6 +8,7 @@
   const navbarCollapse = document.getElementById("navbarNav");
   const backToTop = document.getElementById("backToTop");
   const mobileBreakpoint = 992;
+  const navToggleButton = navbar?.querySelector(".navbar-toggler");
   const navToggleIcon = navbar?.querySelector(".navbar-toggler i");
 
   const navLinks = Array.from(document.querySelectorAll("#navbarNav a"));
@@ -175,10 +176,26 @@
     navbar.classList.toggle("menu-open", shouldEnable);
     document.body.classList.toggle("mobile-nav-open", shouldEnable);
 
+    if (navToggleButton) {
+      navToggleButton.setAttribute("aria-expanded", String(shouldEnable));
+      navToggleButton.setAttribute(
+        "aria-label",
+        shouldEnable ? "Tutup navigasi" : "Buka navigasi"
+      );
+    }
+
     if (navToggleIcon) {
       navToggleIcon.classList.toggle("bi-list", !shouldEnable);
       navToggleIcon.classList.toggle("bi-x-lg", shouldEnable);
     }
+  };
+
+  const syncMobileMenuState = () => {
+    if (!navbarCollapse) {
+      return;
+    }
+
+    setMobileMenuState(navbarCollapse.classList.contains("show"));
   };
 
   const buildContactWhatsappUrl = () => {
@@ -449,14 +466,23 @@
   window.addEventListener("resize", () => {
     if (!isMobileViewport()) {
       setMobileMenuState(false);
+      return;
     }
+
+    syncMobileMenuState();
   });
 
   backToTop?.addEventListener("click", scrollToTop);
 
+  navToggleButton?.addEventListener("click", () => {
+    window.setTimeout(syncMobileMenuState, 20);
+  });
+
   navbarCollapse?.addEventListener("show.bs.collapse", () => {
     setMobileMenuState(true);
   });
+
+  navbarCollapse?.addEventListener("shown.bs.collapse", syncMobileMenuState);
 
   navbarCollapse?.addEventListener("hidden.bs.collapse", () => {
     setMobileMenuState(false);
@@ -480,4 +506,6 @@
       });
     });
   }
+
+  syncMobileMenuState();
 })();

@@ -63,7 +63,7 @@ Desain dibuat **responsif**, ringan, dan SEO-friendly.
 📍 Cirebon, Jawa Barat – Indonesia  
 
 📱 WhatsApp: +62 812-2170-3904  
-📧 Email: info@banggagroup.co.id  
+📧 Email: office@banggagroup.com  
 
 ---
 
