@@ -24,7 +24,7 @@
   const formAlert = document.getElementById("formAlert");
   const submitButton = contactForm?.querySelector('button[type="submit"]');
   const defaultSubmitLabel = submitButton?.textContent.trim() || "Kirim Pesan";
-  const whatsappNumber = "6281221703904";
+  const whatsappNumber = "6282114113464";
 
   const getNavIconClass = (href = "") => {
     if (href.includes("#home")) {
@@ -45,6 +45,10 @@
 
     if (href.includes("portal-berita.html")) {
       return "bi-newspaper";
+    }
+
+    if (href.includes("Lamaran-kerja.html") || href.includes("career")) {
+      return "bi-briefcase";
     }
 
     if (href.includes("#gallery")) {

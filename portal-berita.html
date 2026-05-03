@@ -66,7 +66,7 @@
           <a class="topbar-link" href="mailto:office@banggagroup.com">
             <i class="bi bi-envelope me-2"></i>office@banggagroup.com
           </a>
-          <a class="topbar-link" href="tel:+6281221703904">
+          <a class="topbar-link" href="tel:+6282114113464">
             <i class="bi bi-telephone me-2"></i>+62 821 1411 3464
           </a>
         </div>
@@ -199,7 +199,7 @@
               />
             </div>
             <div id="portalResultsInfo" class="portal-results-info">
-              Menampilkan 1-2 dari 4 berita
+              Menampilkan 1-2 dari 7 berita
             </div>
           </div>
           <div
@@ -231,6 +231,20 @@
             <button
               type="button"
               class="portal-filter-btn"
+              data-news-filter="mutu"
+            >
+              Mutu
+            </button>
+            <button
+              type="button"
+              class="portal-filter-btn"
+              data-news-filter="ketenagakerjaan"
+            >
+              Ketenagakerjaan
+            </button>
+            <button
+              type="button"
+              class="portal-filter-btn"
               data-news-filter="distribusi"
             >
               Distribusi
@@ -241,6 +255,13 @@
               data-news-filter="industri"
             >
               Industri
+            </button>
+            <button
+              type="button"
+              class="portal-filter-btn"
+              data-news-filter="integritas"
+            >
+              Integritas
             </button>
           </div>
         </div>
@@ -283,6 +304,58 @@
                 menjaga konsistensi kualitas produk di pasar.
               </p>
               <a href="news/berita-produksi-sms.html" class="link-arrow"
+                >Lihat Detail <i class="bi bi-arrow-right"></i
+              ></a>
+            </article>
+          </div>
+
+          <div
+            class="col-md-6 portal-news-item"
+            data-news-title="TEMBUS AUDIT BPOM: CV Sanjaya Maju Sejahtera Raih Peringkat B CPPOB (Cara Produksi Pangan Olahan yang Baik), Komitmen Gaspol Menuju Standar Lebih Tinggi"
+            data-news-category="mutu"
+          >
+            <article class="premium-card news-card h-100">
+              <div class="image-frame portal-news-photo">
+                <img
+                  src="img/Berita/5.jpeg"
+                  alt="Audit CPPOB BPOM CV Sanjaya Maju Sejahtera"
+                />
+              </div>
+              <div class="portal-news-meta">
+                Mutu &amp; Keamanan Pangan • 5 Maret 2026
+              </div>
+              <h3>CV Sanjaya Maju Sejahtera Raih Peringkat B CPPOB</h3>
+              <p>
+                Hasil audit BPOM menjadi dorongan untuk memperkuat sistem
+                produksi, pengendalian mutu, dan budaya keamanan pangan.
+              </p>
+              <a href="news/berita-hasil-bpom.html" class="link-arrow"
+                >Lihat Detail <i class="bi bi-arrow-right"></i
+              ></a>
+            </article>
+          </div>
+
+          <div
+            class="col-md-6 portal-news-item"
+            data-news-title="PATUH &amp; BERBENAH: Pemeriksaan Ketenagakerjaan di CV Sanjaya Maju Sejahtera Dorong Peningkatan Sistem dan Kepatuhan"
+            data-news-category="ketenagakerjaan"
+          >
+            <article class="premium-card news-card h-100">
+              <div class="image-frame portal-news-photo">
+                <img
+                  src="img/Berita/4.jpeg"
+                  alt="Pemeriksaan ketenagakerjaan di CV Sanjaya Maju Sejahtera"
+                />
+              </div>
+              <div class="portal-news-meta">
+                Ketenagakerjaan • 14 Januari 2026
+              </div>
+              <h3>Pemeriksaan Ketenagakerjaan Dorong Sistem Lebih Patuh</h3>
+              <p>
+                CV Sanjaya Maju Sejahtera menindaklanjuti pemeriksaan melalui
+                penguatan administrasi, dokumentasi, dan kepatuhan regulasi.
+              </p>
+              <a href="news/berita-audit-tenaga-kerja.html" class="link-arrow"
                 >Lihat Detail <i class="bi bi-arrow-right"></i
               ></a>
             </article>
@@ -336,6 +409,30 @@
               ></a>
             </article>
           </div>
+
+          <div
+            class="col-md-6 portal-news-item"
+            data-news-title="BANGGA GROUP KOMITMEN KERJA DI HOTEL PATRA CIREBON: SATU VISI, SATU INTEGRITAS, SATU TUJUAN"
+            data-news-category="integritas"
+          >
+            <article class="premium-card news-card h-100">
+              <div class="image-frame portal-news-photo">
+                <img
+                  src="img/Berita/3.JPG"
+                  alt="Kegiatan komitmen kerja BANGGA GROUP di Hotel Patra Cirebon"
+                />
+              </div>
+              <div class="portal-news-meta">Integritas • 8 Februari 2026</div>
+              <h3>Komitmen Kerja BANGGA GROUP di Hotel Patra Cirebon</h3>
+              <p>
+                Penandatanganan pakta integritas memperkuat budaya kerja
+                profesional, transparan, dan selaras lintas unit usaha.
+              </p>
+              <a href="news/berita-integritas.html" class="link-arrow"
+                >Lihat Detail <i class="bi bi-arrow-right"></i
+              ></a>
+            </article>
+          </div>
         </div>
 
         <div id="portalNewsEmptyState" class="portal-empty-state d-none">
@@ -343,7 +440,7 @@
         </div>
 
         <div class="portal-pagination">
-          <div id="portalPageInfo" class="portal-page-info">Halaman 1 / 2</div>
+          <div id="portalPageInfo" class="portal-page-info">Halaman 1 / 4</div>
           <div class="portal-pagination-actions">
             <button type="button" id="portalPrev" class="portal-nav-btn">
               Sebelumnya
@@ -375,7 +472,7 @@
                 ><i class="bi bi-envelope"></i
               ></a>
               <a
-                href="https://wa.me/6281221703904"
+                href="https://wa.me/6282114113464"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="social-btn"
@@ -420,8 +517,8 @@
                 >
               </li>
               <li>
-                <a class="footer-contact-link" href="tel:+6281221703904"
-                  >+62 812-2170-3904</a
+                <a class="footer-contact-link" href="tel:+6282114113464"
+                  >+62 821 1411 3464</a
                 >
               </li>
               <li>
