@@ -1694,6 +1694,8 @@ p {
   display: flex;
   align-items: center;
   gap: 12px;
+  width: 100%;
+  min-width: 0;
   margin-bottom: 18px;
   padding: 14px 16px;
   border-radius: 8px;
@@ -1703,6 +1705,10 @@ p {
   font-weight: 700;
   overflow-wrap: anywhere;
   word-break: break-word;
+}
+
+.career-apply-email i {
+  flex: 0 0 auto;
 }
 
 .career-apply-email:hover {
@@ -2101,7 +2107,9 @@ p {
 
   .career-apply-email {
     align-items: flex-start;
-    font-size: 0.9rem;
+    gap: 9px;
+    font-size: clamp(0.76rem, 3.4vw, 0.9rem);
+    line-height: 1.5;
   }
 
   .topbar {
@@ -2361,6 +2369,16 @@ p {
 
   .footer-links li {
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 399.98px) {
+  .career-apply-panel {
+    padding: 20px 18px;
+  }
+
+  .career-apply-email {
+    padding: 12px 11px;
   }
 }
 
