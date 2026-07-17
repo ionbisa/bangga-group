@@ -1390,6 +1390,11 @@ p {
     #f7f9f4;
 }
 
+.career-page p {
+  text-align: justify;
+  text-align-last: left;
+}
+
 .career-hero {
   position: relative;
   overflow: hidden;
@@ -1509,7 +1514,7 @@ p {
 }
 
 .career-panel-position {
-  margin-top: 12px;
+  margin-top: 0;
   padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
@@ -1696,6 +1701,8 @@ p {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.16);
   font-weight: 700;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .career-apply-email:hover {
@@ -1861,6 +1868,10 @@ p {
 
   .career-overview-section {
     margin-top: -12px;
+  }
+
+  .career-inline-details {
+    grid-template-columns: 1fr;
   }
 
   body.mobile-nav-open {
@@ -2064,6 +2075,10 @@ p {
     padding: 24px;
   }
 
+  .career-job-tags span {
+    flex: 1 1 calc(50% - 12px);
+  }
+
   .career-apply-strip {
     align-items: flex-start;
     flex-direction: column;
@@ -2082,6 +2097,11 @@ p {
   .career-inline-details {
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+
+  .career-apply-email {
+    align-items: flex-start;
+    font-size: 0.9rem;
   }
 
   .topbar {
